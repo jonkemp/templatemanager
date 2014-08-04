@@ -1,0 +1,21 @@
+{
+  "name": "TemplateManager",
+  "version": "0.0.0",
+  "authors": [
+    "Jonathan Kemp <jonathan.kemp@cellularsales.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "underscore": "~1.6.0",
+    "jasmine": "~2.0.1"
+  }
+}
