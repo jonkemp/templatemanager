@@ -6,24 +6,23 @@
     var _TemplateManager = global.TemplateManager;
 
     function TemplateManager() {
-        return {
-            cache: {},
+        var cache = {};
 
+        return {
             template: function (path) {
 
-                var _this = this,
-                    deferred = new $.Deferred(),
+                var deferred = new $.Deferred(),
                     resolvePromise = function (template) {
                         deferred.resolveWith( null, [  _.template( template ) ] );
                     };
 
-                if (_this.cache[path]) {
-                    resolvePromise( _this.cache[path] );
+                if (cache[path]) {
+                    resolvePromise( cache[path] );
                 } else {
                     $.ajax({
                         url: path,
                         success: function (data) {
-                            _this.cache[path] = data;
+                            cache[path] = data;
                             resolvePromise( data );
                         },
                         error: function () {
