@@ -25,6 +25,7 @@ templateManager.template('templates/hello.html')
         template({ name: 'Fred' });
     });
 ```
+To see an example of this, check out the [wizard-mvc project](https://github.com/jonkemp/wizard-mvc/tree/master/public/backbone).
 
 ## License 
 
